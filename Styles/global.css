@@ -18,10 +18,29 @@
 --font-family: 'Archivo', 'Sans-serif'; 
 --h1: 800 24px/135% var(--font-family);
 --h2: 800 16px/140% var(--font-family);
+--h3: 800 14px/140% var(--font-family); 
+--text-span: 400 14px/140% var(--font-family);
+--text: 400 16px/140% var(--font-family);
+--text-sm: 400 14px/160% var(--font-family); 
 }
 
 body { 
-
+font: var(--text);
 color: var(--text-color-primary);
 background-color: var(--bg-color);
+}
+
+a {                 /* personalizando os links */ 
+  text-decoration: none ;
+  color: inherit; /* significa que estamos herdando a cor do body, ou seja, do pai*/ 
+}
+ 
+a:hover {   /* quando passar o mouse em cima do A "dos links"  */ 
+    color: var(--brand-color-light);
+
+}
+
+h1, h2, h3 { 
+font: inherit;  /* herdando novamente a fonte do elemento pai. */
+
 }
