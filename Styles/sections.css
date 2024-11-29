@@ -1,0 +1,59 @@
+#featured {
+  img {
+    height: 100%; /* preeche os espaço certinho que estava sobrando, porem a imagem .. estica */
+    object-fit: cover; /* quando a gente coloca o cover resolve isso. preenche o espaço que tava sobrando*/
+    
+
+  }
+
+
+   /* estou criando um elemento com css, preciso de um posicionamento, cor de fundo: */
+  .card { 
+    border-radius: 4px;
+    overflow: hidden; /* esconda tudo que passar da cx. overflow: transbordamento  */
+    position: relative;
+    
+    
+    &::before {   /* o "&" comercial esta substituindo o "card", pois ja esta dentro aqui */
+     content: "";     
+     position: absolute;
+     inset: 0;
+     top:50%; 
+     background: linear-gradient(
+       180deg, transparent 0%, #020617 100%
+     ); 
+     
+     /* função que permite fazer um degrade */ 
+     /* primeiro coloco a angulação que eu quero no caso 180 graus em ingles, 180deg*/
+     /* segundo, coloco a cor, no caso transparente saindo do 0%, e depois a cor final */ 
+
+
+     }
+
+      figcaption { 
+         position: absolute;
+         bottom: 0;
+         padding: 24px;
+
+         &:has(.text-lg) {  /* no figcaption, dentro dele, tem algum 'text-lg' sim? ok! aplica entao esse padding pra mim  */ 
+          padding: 12px;
+         }
+    
+
+
+
+
+        /* dentro de figcaption temos um h2, é só ver no HTML. */
+
+        h2 {
+          margin-top: 8px;
+        }
+       
+      }
+
+
+
+  }
+
+
+}

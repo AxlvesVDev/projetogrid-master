@@ -45,11 +45,17 @@ font: inherit;  /* herdando novamente a fonte do elemento pai. */
 
 }
 
+
+img { 
+  max-width: 100%;  /* estou falando pra imagem, pra ela respeitar a largura da caixa que ela esta naquele momento */
+}
+
 .container {   /* onde vai conter as coisas */ 
    max-width: 1280px ;
    padding-inline: 32px;   /* eixo horizontal, recaptulando  */
-   margin-inline-start: auto;
+   margin-inline: auto;
 }
+/* fui no header e fiz o seguinte, coloquei uma class nele class=container para ele pegar essas informações  */
 
 
 /* utility-first - conceito de uf, quando tenho uma classe, que ela vai fazer apenas uma coisa  */
@@ -63,8 +69,56 @@ font: inherit;  /* herdando novamente a fonte do elemento pai. */
   grid-auto-flow:column;   /*  flow automatico */
   
 }
+
+.grid-cols-2 { 
+
+grid-template-columns: 1fr 1fr;
+}
+
+.gap-16 { 
+  gap: 16px;
+}
+
+
+.text-2xl {    /* texto extra large, 2x grande */
+ font: var(--h1);
+
+}
+
+.text-xl {   
+  font: var(--h2);
+ 
+ }
+
+ .text-lg {    
+  font: var(--h3);
+ 
+ }
+
+
+ .text-sm {    
+  font: var(--text-sm);
+ 
+ }
+
 /* PONTO IMPORTANTE: CRIAMOS A .GRID PRIMEIRO, DEPOIS FOMOS NO HTML, E CLASSIFICAMOS O ELEMENTO SECUNDAY
 E PRIMARY COMO CLASS="GRID GRID-FLOW-COL" ASSIM ELE FICOU MAIS CORRETO PERTO DO PERFEITO O NOSSO HEADER */
 
 /* CRIAMOS PRIMEIRO O CSS E CLASSIFICAMOS LA NO HTML , RESUMIDAMENTE. */
 
+
+main { 
+  margin-top: 40px;
+}
+
+.content-tag { 
+ display: inline-block; /* para a propriedade do padding ficar correta */ 
+ background-color: var(--brand-color-dark) ;
+ padding: 4px 8px;
+ border-radius: 4px;
+ font: 500 10px/1.2 var(--font-family);
+ text-transform: uppercase;
+ letter-spacing: 0.04em;
+ color: var(--text-color-primary);
+ box-shadow: 8px 4px 16px rgba(2, 6, 23, 0.251);
+}
