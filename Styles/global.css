@@ -44,3 +44,27 @@ h1, h2, h3 {
 font: inherit;  /* herdando novamente a fonte do elemento pai. */
 
 }
+
+.container {   /* onde vai conter as coisas */ 
+   max-width: 1280px ;
+   padding-inline: 32px;   /* eixo horizontal, recaptulando  */
+   margin-inline-start: auto;
+}
+
+
+/* utility-first - conceito de uf, quando tenho uma classe, que ela vai fazer apenas uma coisa  */
+/* CLASSE UTILITARIA .grid */
+.grid {            
+  display: grid;
+}
+
+.grid-flow-col {  /* estarei mudando o fluxo do grid, "flow"  */ 
+
+  grid-auto-flow:column;   /*  flow automatico */
+  
+}
+/* PONTO IMPORTANTE: CRIAMOS A .GRID PRIMEIRO, DEPOIS FOMOS NO HTML, E CLASSIFICAMOS O ELEMENTO SECUNDAY
+E PRIMARY COMO CLASS="GRID GRID-FLOW-COL" ASSIM ELE FICOU MAIS CORRETO PERTO DO PERFEITO O NOSSO HEADER */
+
+/* CRIAMOS PRIMEIRO O CSS E CLASSIFICAMOS LA NO HTML , RESUMIDAMENTE. */
+
