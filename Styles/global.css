@@ -54,6 +54,7 @@ img {
    max-width: 1280px ;
    padding-inline: 32px;   /* eixo horizontal, recaptulando  */
    margin-inline: auto;
+   display: grid;
 }
 /* fui no header e fiz o seguinte, coloquei uma class nele class=container para ele pegar essas informações  */
 
@@ -78,6 +79,12 @@ grid-template-columns: 1fr 1fr;
 .gap-16 { 
   gap: 16px;
 }
+
+
+.gap-32 {
+   gap: 32px;
+}
+
 
 
 .text-2xl {    /* texto extra large, 2x grande */
@@ -107,8 +114,17 @@ E PRIMARY COMO CLASS="GRID GRID-FLOW-COL" ASSIM ELE FICOU MAIS CORRETO PERTO DO 
 /* CRIAMOS PRIMEIRO O CSS E CLASSIFICAMOS LA NO HTML , RESUMIDAMENTE. */
 
 
-main { 
+main {   /* o main ele esta definindo as sections, nesse projeto*/
+  margin-block: 40px;
   margin-top: 40px;
+  row-gap: 80px;
+  column-gap: 32px;
+  grid-template-columns: 2fr 1.4fr; /* organizando a parte das imagem menos, apenas 30% ali na parte da direita */ 
+
+  grid-template-areas: 
+  "featured featured"
+  "weekly weekly"
+  "ai aside";
 }
 
 .content-tag { 
